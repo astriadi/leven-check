@@ -4,7 +4,7 @@ function lev2(a, b) {
 
   var len1 = a.length;
   var len2 = b.length;
-  
+
   if (a.length === 0) return b.length;
   if (b.length === 0) return a.length;
 
@@ -39,5 +39,10 @@ function lev2(a, b) {
     }
   }
 
-  document.getElementById("tes").innerHTML = ((Math.max(len1, len2) - matrix[b.length][a.length])/Math.max(len1, len2)*100).toFixed(2) + '%';
+  document.getElementById("tes").innerHTML =
+    (
+      ((Math.max(len1, len2) - matrix[b.length][a.length]) /
+        Math.max(len1, len2)) *
+      100
+    ).toFixed(2) + "%";
 }
