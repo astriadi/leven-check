@@ -22,11 +22,35 @@
         <h5 class="card-title">Input your text here</h5>
         <p class="card-text"></p>
         <form id="formlev">
-          <p>Human Translation: <input type="text" class="col-md-6" /></p>
-          <p>Google Translation: <input type="text" class="col-md-6" /></p>
+          <!-- <p>Human Translation: <textarea type="text" class="col-md-6" onkeyup="lev2()"></textarea></p>
+          <p>Google Translation: <textarea type="text" class="col-md-6" onkeyup="lev2()"></textarea></p> -->
+
+          <div class="form-group">
+            <label for="manualtranslation">Manual Translation</label>
+            <textarea
+              type="text"
+              class="form-control"
+              id="manualtranslation"
+              rows="1"
+              onkeyup="lev2()"
+              placeholder="Enter your manual translation here"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="googletranslation">Google Translation</label>
+            <textarea
+              type="text"
+              class="form-control"
+              id="googletranslation"
+              rows="1"
+              onkeyup="lev2()"
+              placeholder="Paste your Google translation here"
+            ></textarea>
+          </div>
         </form>
-        <button onclick="lev2()" class="btn btn-primary" id="tes">
-          Click me
+        <button class="btn btn-primary" id="tes">
+          Auto
         </button>
       </div>
     </div>
