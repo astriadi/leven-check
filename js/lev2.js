@@ -4,7 +4,6 @@ function lev2(a, b) {
 
   var len1 = a.length;
   var len2 = b.length;
- 
 
   if (a.length === 0) return b.length;
   if (b.length === 0) return a.length;
@@ -43,20 +42,20 @@ function lev2(a, b) {
   document.getElementById("tes").innerHTML = parseFloat(
     ((Math.max(len1, len2) - matrix[b.length][a.length]) /
       Math.max(len1, len2)) *
-    100
+      100
   ).toFixed(2);
 
-
-
-
-
-if (document.getElementById("tes").innerHTML > 85) {
-  document.getElementById("tes").className = "btn btn-danger"
-} else {
-  document.getElementById("tes").className = "btn btn-primary"
+  if (document.getElementById("tes").innerHTML > 85) {
+    document.getElementById("tes").className = "btn btn-danger";
+  } else {
+    document.getElementById("tes").className = "btn btn-primary";
+  }
 }
 
-
-
-
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
 }
